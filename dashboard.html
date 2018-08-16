@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="navbar"> <!-- Start Navigation -->
+    <div class="toggle"> <!-- Toggle Buttom -->
+        <i class="fa fa-bars"></i>
+    </div>
+    <ul>
+        <li><a href="#">home</a> </li>
+        <li class="dropdown"><a href="#">admin <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Edit profile</a> </li>
+                <li><a href="#">log out</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div> <!-- End Navigation -->
+
+<div class="slidebar"> <!-- Start Slidebar Menu -->
+    <div class="header">
+        admin
+    </div>
+    <h3><i class="fa fa-dashboard"></i> dashboard</h3>
+    <ul>
+        <li><a href=""><i class="fa fa-edit"></i> post <i class="fa fa-chevron-right"></i></a>  </li>
+        <li><a href="#"><i class="fa fa-comments-o"></i> comments <i class="fa fa-chevron-right"></i></a> </li>
+        <li><a href="#"><i class="fa fa-plus"></i> pages <i class="fa fa-chevron-right"></i></a></li>
+        <li><a href="#"><i class="fa fa-user"></i> users <i class="fa fa-chevron-right"></i></a></li>
+        <li><a href="#"><i class="fa fa-bar-chart"></i> analytics</a></li>
+    </ul>
+</div> <!-- End Slidebar Menu -->
+
+<div class="content">
+    <div class="container">
+    <div class="header">
+        <h3>Dashboard</h3>
+        <p>dashboard</p>
+    </div>
+        <!-- Comment Box -->
+    <div class="box comment">
+        <div class="info">
+            <h3>6</h3>
+            <p>comments</p>
+        </div>
+        <i class="fa fa-comment"></i>
+        <div class="seeall">
+            <a href="#">see all <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+    </div>
+
+        <!-- User Box -->
+
+    <div class="box user">
+        <div class="info">
+            <h3>20</h3>
+            <p>users</p>
+        </div>
+        <i class="fa fa-user"></i>
+        <div class="seeall">
+            <a href="#">see all <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+    </div>
+
+        <!-- Post Box -->
+
+    <div class="box post">
+        <div class="info">
+            <h3>10</h3>
+            <p>posts</p>
+        </div>
+        <i class="fa fa-edit"></i>
+        <div class="seeall">
+            <a href="#">see all <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+    </div>
+
+        <!-- Page Box -->
+
+   <div class="box page">
+       <div class="info">
+           <h3>60</h3>
+           <p>pages</p>
+       </div>
+       <i class="fa fa-plus"></i>
+       <div class="seeall">
+           <a href="#">see all <i class="fa fa-chevron-circle-right"></i></a>
+       </div>
+   </div>
+
+   </div>
+
+   <p class="private">Design by Hamam Gazafe - 2018 - hamamgazafe@gmail.com</p>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    $(function () {
+    	/* Dropdown-menu show */
+        $(".dropdown").click(function () {
+            $(".dropdown-menu").slideToggle();
+        });
+
+
+
+        $(".toggle").click(function () {
+            $(".slidebar").toggleClass("active"); /* Add Class Active  */
+            $(".navbar").toggleClass("full-width");
+            $(".content").toggleClass("full-width");
+        });
+    })
+</script>
+
+</body>
+</html>
